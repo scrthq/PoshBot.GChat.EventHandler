@@ -13,7 +13,6 @@ function AddedToSpace {
         [string[]]$Arguments
     )
     $originalMessage = ConvertFrom-Json $Global:PoshBotContext.ParsedCommand.CommandString
-    $Global:poshbotcontext | ConvertTo-Json -Depth 20 | Out-File "$PSScriptRoot\AddedToSpacePoshBotContext_$(Get-Date -Format "HHmmss").json"
     Import-Module PSGSuite -MinimumVersion "2.13.0"
     Import-Module PoshBot.GChat.Backend
     $text = switch ($originalMessage.space.type) {
@@ -41,7 +40,6 @@ function RemovedFromSpace {
         [string[]]$Arguments
     )
     $originalMessage = ConvertFrom-Json $Global:PoshBotContext.ParsedCommand.CommandString
-    $Global:poshbotcontext | ConvertTo-Json -Depth 20 | Out-File "$PSScriptRoot\RemovedFromSpacePoshBotContext_$(Get-Date -Format "HHmmss").json"
     Import-Module PSGSuite -MinimumVersion "2.13.0"
     Import-Module PoshBot.GChat.Backend
     
@@ -62,7 +60,6 @@ function CardClicked {
         [parameter(Position = 0,ValueFromRemainingArguments = $true)]
         [string[]]$Arguments
     )
-    $Global:PoshBotContext | ConvertTo-Json -Depth 20 | Out-File "$PSScriptRoot\CardClickedPoshBotContext_$(Get-Date -Format "HHmmss").json"
     $originalMessage = ConvertFrom-Json $Global:PoshBotContext.ParsedCommand.CommandString
     $actionMethod = $originalMessage.action.actionMethodName
     $actionParameters = $originalMessage.action.parameters
