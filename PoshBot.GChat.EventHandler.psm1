@@ -1,6 +1,5 @@
 function AddedToSpace {
     [PoshBot.BotCommand(
-        Permissions = 'Admin',
         HideFromHelp = $true,
         Command = $false,
         TriggerType = 'Event',
@@ -27,7 +26,6 @@ function AddedToSpace {
 }
 function RemovedFromSpace {
     [PoshBot.BotCommand(
-        Permissions = 'Admin',
         HideFromHelp = $true,
         Command = $false,
         TriggerType = 'Event',
@@ -49,7 +47,6 @@ function RemovedFromSpace {
 
 function CardClicked {
     [PoshBot.BotCommand(
-        Permissions = 'Admin',
         HideFromHelp = $true,
         Command = $false,
         TriggerType = 'Event',
