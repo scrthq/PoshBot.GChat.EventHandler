@@ -1,6 +1,14 @@
 # PoshBot.GChat.EventHandler
 > A PoshBot plugin to add event handling for Google Chat events emitted from the PoshBot.GChat.Backend.
 
+## What are the prerequisites?
+
+To use this, you'll need the following set up:
+* [PoshBot](https://github.com/poshbotio/PoshBot)
+* [PSGSuite](https://github.com/scrthq/PSGSuite)
+* [GoogleAppsScriptSheetMQ](https://github.com/scrthq/GoogleAppsScriptSheetMQ)
+* [PoshBot.GChat.Backend](https://github.com/scrthq/PoshBot.GChat.Backend)
+
 ## What is this?
 
 This is a PoshBot plugin that enables handling for the following Google Chat events:
